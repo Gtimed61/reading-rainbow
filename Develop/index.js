@@ -2,9 +2,9 @@
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown.js');
 const fs = require('fs');
+const path = require('path');
 // TODO: Create an array of questions for user input
-const questions = () => {
-    return inquirer.questions([
+const questions = [
         {
             type: 'input',
             name: 'description',
@@ -46,8 +46,7 @@ const questions = () => {
         {
             type: 'checkbox',
             name: 'license',
-            message: '',
-            validate: 
+            choices: ['MIT' , 'Apache 2.0' , 'GPL 3.0' , 'BSD 3', 'None'],
         },
         {
             type: 'input',
@@ -69,22 +68,31 @@ const questions = () => {
             default: true
 
         }
-    ]);
-};
+    ];
 
 // TODO: Create a function to write README file
-fs.writeFile('README.md', '', (err) => {
+function writeToFile(fileName, data) {
+    console.log('hi')
+    return fs.writeFileSync(path.join(process.cwd(), fileName), data)
+}
+/*fs.writeFile('README.md', generateMarkdown(), (err) => {
     if (err) {
         console.error(err)
         return
     } else {
         console.log('wrote to file success!')
     } 
-})
+}) */
 
 // TODO: Create a function to initialize app
-questions()
-    .then
+function init() {
+    inquirer.prompt(questions).then(responses => {
+        console.log('generate read me.')
+        writeToFile('README.md', generateMarkdown({...responses}))
+        console.log(responses)
+    })
+}
+    
 
 // Function call to initialize app
 init();
