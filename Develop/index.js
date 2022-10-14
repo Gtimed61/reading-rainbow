@@ -3,8 +3,24 @@ const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown.js');
 const fs = require('fs');
 const path = require('path');
+const { title } = require('process');
 // TODO: Create an array of questions for user input
 const questions = [
+        {
+            type: 'input',
+            name: 'title',
+            message: 'What is the name of your project?',
+            validate: titleInput => {
+                if (titleInput) {
+                    return true;
+                } else {
+                    console.log('Please enter a name for your project!')
+                }
+
+            }
+
+    
+        },
         {
             type: 'input',
             name: 'description',
@@ -65,9 +81,35 @@ const questions = [
             type: 'input',
             name: 'tests',
             message: 'Did you test the application?',
-            default: true
-
+            default: false
+        },
+        {
+            type: 'input',
+            name: 'questions',
+            message: 'Please enter your GitHub user name:',
+            valdiate: questionsInput => {
+                if (questionsInput) {
+                    return true;
+                } else {
+                    console.log('Please enter your GitHub username!')
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'questions',
+            message: 'Please enter your email address:',
+            validate: questionsInput => {
+                if (questionsInput) {
+                    return true;
+                } else {
+                    console.log('Please enter an email address!')
+                }
+            }
         }
+
+
+
     ];
 
 // TODO: Create a function to write README file

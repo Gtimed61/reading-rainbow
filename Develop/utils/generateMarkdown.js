@@ -13,7 +13,7 @@ function renderLicenseBadge(license) {
 function renderLicenseLink(license) {
   if (license !== 'none') {
     return `
-    !
+    ![GitHub License](https://img.shields.io/badge/license-${license}-blue.svg)
     `
   }
 }
@@ -23,48 +23,77 @@ function renderLicenseLink(license) {
 function renderLicenseSection(license) {
   if (license !== 'none') {
     return `
-    !
+    ![GitHub License](https://img.shields.io/badge/license-${license}-blue.svg)
     `
   }
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `
-  ## Description
+  return` # ${data.title}
+
+  
+  $//{renderLicenseBadge(license)}
+
+  # Table of Contents
+
+  [Description]#Description
+  [Installation]#Installation
+  [Usage]#Usage
+  [License]#License
+  [Contributing]#Contributing
+  [Tests]#Tests
+  [Questions]#Questions
+
+
+  # Description
 
 
   ${data.description}
   
 
-  ## Installation
+  # Installation
 
 
   ${data.installation}
   
   
-  ## Usage
+  # Usage
 
   
   ${data.usage}
   
 
-  ## License
+  # License
   
-
+  $//{renderLicenseSection(license)}
+  $//{renderLicenseLink(license)}
   ${data.license}
+ 
   
 
-  ## Contributing
+  # Contributing
   
 
   ${data.contributing}
   
 
-  ## Tests
+  # Tests
   
-  
+
   ${data.tests}
+
+
+  # Questions
+
+
+  ${data.questions}
+
+
+  GitHub Profile ---> https://github.com/Gtimed61
+
+  ---> Please reach out to me with questions
+  ---> [gthorne61@gmail.com]#gthorne61@gmail.com
 `;
 }
 

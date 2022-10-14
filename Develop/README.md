@@ -1,24 +1,70 @@
+  # reading-rainbow
 
-  ##Description
+  ${license}
+  $//{renderLicenseBadge(license)}
 
-  ia
-  
-  ##Installation
+  # Table of Contents
 
-  kdd
+  [Description] #Description
+
+  [Installation] #Installation
+
+  [Usage] #Usage
+
+  [License] #License
+
+  [Contributing] #Contributing
+
+  [Tests] #Tests
+
+  [Questions] #Questions
+
+
+
+  # Description
+
+
+  This is a read me file generator
   
-  ##Usage
+
+  # Installation
+
+
+  To install follow the link to GitHub
   
-  dld
   
-  ##License
+  # Usage
+
   
-  MIT,GPL 3.0,BSD 3
+  To generate a professional README.md file
   
-  ##Contributing
+
+  # License
   
-  dxcdc
+  $//{renderLicenseSection(license)}
+  $//{renderLicenseLink(license)}
   
-  ##Tests
+ 
   
-  ddf
+
+  # Contributing
+  
+
+  Grant Thorne
+  
+
+  # Tests
+  
+
+  n
+
+
+  # Questions
+
+
+  Gtimed61
+
+  GitHub Profile ---> https://github.com/Gtimed61
+
+  ---> Please reach out to me with questions
+  ---> [gthorne61@gmail.com]#gthorne61@gmail.com
