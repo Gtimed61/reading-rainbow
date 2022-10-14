@@ -8,4 +8,7 @@
   Grant Thorne
   
 # GitHub Repository Link
+  https://github.com/Gtimed61/reading-rainbow.git
+  
+# Screencastify Link 
   
