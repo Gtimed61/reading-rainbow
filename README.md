@@ -11,6 +11,7 @@
   Gtimed61
   
 # GitHub repository Link
+  https://github.com/Gtimed61/reading-rainbow.git
 
 # Screencastify Link
   
